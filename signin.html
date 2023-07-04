@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign IN Page</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/253b27cc50.js" crossorigin="anonymous"></script>
+    <script defer src="main.js"></script>
+</head>
+<body>
+    <div class="SignIn">
+        <div class="Left">
+        <img src="images/Facebook-Logo.png" alt="facebook" width="170px">
+        <h2>Recent logins</h2>
+        <p class="left-p">Click your picture or add an account.</p>
+        <div class="account">
+            <div class="add_account"><span>+</span></div>
+            <p>Add Account</p>
+        </div>
+        </div>
+        <div class="Right">
+        <form action="signup.html" method="post" onsubmit="return signIn()">
+        <p id="error"></p>
+        <input type="text" name="email" id="email" placeholder="Email address or phone number"><br>
+        <input type="password" name="password" id="password" placeholder="Password"><br>
+        <button type="submit" class="login_btn">Log In</button>
+        </form>    
+        <p class="forget-pass">Forrget password ?</p>
+        <hr>
+        <button data-modal-target="#modal" class="login_btn new-account">Create new account</button>
+        </div>
+    </div>
+    <div class="modal" id="modal">
+    <div class="modal-header">
+        <div>
+        <h1>Sign Up</h1>
+        <p>it's quick and easy.</p>
+        </div>
+        <button data-close-button class="close-button">&times;</button>
+    </div>
+    <hr style="width: 94%;margin: 0 auto;">
+    <div class="modal-body">
+        <form  action="" method="get" class="signUpForm" onsubmit="return signUp()">
+            <p id="errorUp"></p>
+            <input type="text" id="fristname" name="fristname" placeholder="fristname"  required>
+            <input type="text" id="lastname" name="lastname" placeholder="lastname"  >
+            <input type="email" id="emailup" name="email" placeholder="enter your email address">
+            <input type="password" id="passwordup" name="pass" placeholder="enter your password" >
+            <div class="select_date"><label for="date" >Date of birth </label><i class="fa-solid fa-circle-question"></i></div>
+            <select id="date">
+                <option value="1" selected>1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+            </select>
+            <select  id="date">
+                <option value="jan">jan</option>
+                <option value="feb">feb</option>
+                <option value="march">march</option>
+                <option value="april">april</option>
+                <option value="mai">mai</option>
+            </select>
+            <select  id="date">
+                <option value="2000">2000</option>
+                <option value="2001">2001</option>
+                <option value="2002">2002</option>
+                <option value="2003">2003</option>
+                <option value="2004">2004</option>
+            </select>
+            <div class="select_date"><label>Gender</label><i class="fa-solid fa-circle-question"></i></div>
+            <div class="signUp_gender">
+            <label for="female">Female</label>
+            <input type="radio" name="gender" value="female">
+            </div>
+            <div class="signUp_gender">
+            <label for="male">male</label>
+            <input type="radio" name="gender" value="male">
+            </div>
+            <div class="signUp_gender">
+            <label for="custom">custom</label>
+            <input type="radio" name="gender" value="custom">
+            </div>
+            <br>
+            <br>
+            <input type="submit" value="SignUp" class="signUp_btn">
+            
+            </form>
+    </div>
+    </div>
+    <div id="overlay"></div>  <!--for background model  -->
+    
+</body>
+</html>
